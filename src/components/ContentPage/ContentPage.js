@@ -9,6 +9,7 @@
 'use strict';
 
 import React from 'react';
+import ClickCounter from '../ClickCounter/ClickCounter.js'
 
 export default React.createClass({
 
@@ -19,8 +20,15 @@ export default React.createClass({
   render() {
     var { className, body, other } = this.props;
 
-    return <div className={'ContentPage ' + className}
-      dangerouslySetInnerHTML={{__html: body}} {...other} />;
+    return <div>
+      <div className={'willCallContainer'}>
+        <ClickCounter />
+      </div>
+
+      <div className={'ContentPage ' + className}
+        dangerouslySetInnerHTML={{__html: body}} {...other} />
+
+    </div>;
   }
 
 });

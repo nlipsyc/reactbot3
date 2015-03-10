@@ -22,6 +22,7 @@ var loading = false;
 if (__SERVER__) {
   pages['/'] = {title: 'Home Page'};
   pages['/privacy'] = {title: 'Privacy Policy'};
+  pages['/will-call'] = {title: 'Billy Cahl'};
 }
 
 var AppStore = assign({}, EventEmitter.prototype, {

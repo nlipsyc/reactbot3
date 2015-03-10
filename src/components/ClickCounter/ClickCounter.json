@@ -1,0 +1,6 @@
+{
+  "name": "Click Counter",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ClickCounter.js"
+}
