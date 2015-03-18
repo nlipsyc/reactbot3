@@ -1,0 +1,75 @@
+/* Landscape (4:3) */
+@media screen and (orientation: landscape) {
+
+  //front splash page
+  /* replace with dynamic scale */
+  .dashboard_splash {
+    top: 36.5%;
+    left: 50%;
+    margin-top: -113px;
+    margin-left: -113px;
+    width: 226px;
+    height: 226px;
+    overflow: hidden;
+    z-index: 1000000;
+  }
+
+  .dashboard_splash_inner {
+    width: 226px;
+    height: 142px;
+  }
+
+  //From aspect-view
+  #h_app .h_container {
+    display: inline-block;
+    position: relative;
+    width: 99%;            /* determine target dimensions */
+    height: 95.5%;
+    margin: 0 auto;
+  }
+
+  .h_dummy {
+    padding-top: 75%; /* 4:3 aspect ratio */
+  }
+
+   //end aspect-view
+
+}
+
+/* iPad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  //from sign-in
+
+  .inner {
+    margin-left: -150px;
+  }
+}
+
+/* Landscape (4:3) */
+/* letterbox for now */
+@media screen and (orientation: landscape) and (min-aspect-ratio: 5/3) {
+  #h_app .h_container {
+    display: inline-block;
+    position: relative;
+    width: 69%;            /* determine target dimensions */
+    margin: 0 auto;
+  }
+}
+//
+///* Portrait (9:16)  Splash*/
+//@media screen and (orientation: portrait) {
+//  /* replace with dynamic scale */
+//  .dashboard_splash {
+//    top: 50%;
+//    left: 50%;
+//    margin-top: -18px;
+//    margin-left: -56px;
+//    width: 113px;
+//    height: 73px;
+//    z-index: 1000000; }
+//
+//  .dashboard_splash_inner {
+//    width: 226px;
+//    height: 71px; }
+//}

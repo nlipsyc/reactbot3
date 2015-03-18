@@ -63,22 +63,44 @@ gulp.task('assets', function() {
     .pipe($.size({title: 'assets'}));
 });
 
-// CSS style sheets
-gulp.task('styles', function() {
-  src.styles = 'src/styles/**/*.{css,less}';
-  return gulp.src('src/styles/bootstrap.less')
-    .pipe($.plumber())
-    .pipe($.less({
-      sourceMap: !RELEASE,
-      sourceMapBasepath: __dirname
+// scss style sheets
+
+gulp.task('scss', function() {
+  gulp.src('src/styles/**/*.scss')
+    .pipe($.plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+      }}))
+    .pipe($.compass({
+      css: 'build/css',
+      sass: 'src/styles',
     }))
-    .on('error', console.error.bind(console))
-    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
-    .pipe($.csscomb())
-    .pipe($.if(RELEASE, $.minifyCss()))
-    .pipe(gulp.dest('build/css'))
-    .pipe($.size({title: 'styles'}));
+    .on('error', function(err) {
+      // Would like to catch the error here
+    })
+    .pipe($.minifyCss())
+    .pipe(gulp.dest('build/css/temp'));
 });
+
+
+
+//// LESS style sheets
+//gulp.task('styles', function() {
+//  src.styles = 'src/styles/**/*.{css,less}';
+//  return gulp.src('src/styles/bootstrap.less')
+//    .pipe($.plumber())
+//    .pipe($.less({
+//      sourceMap: !RELEASE,
+//      sourceMapBasepath: __dirname
+//    }))
+//    .on('error', console.error.bind(console))
+//    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+//    .pipe($.csscomb())
+//    .pipe($.if(RELEASE, $.minifyCss()))
+//    .pipe(gulp.dest('build/css'))
+//    .pipe($.size({title: 'styles'}));
+//});
 
 // Bundle
 gulp.task('bundle', function(cb) {
@@ -110,7 +132,7 @@ gulp.task('bundle', function(cb) {
 
 // Build the app from source code
 gulp.task('build', ['clean'], function(cb) {
-  runSequence(['vendor', 'assets', 'styles', 'bundle'], cb);
+  runSequence(['vendor', 'assets', 'scss', 'bundle'], cb);
 });
 
 // Build and start watching for modifications
@@ -118,7 +140,7 @@ gulp.task('build:watch', function(cb) {
   watch = true;
   runSequence('build', function() {
     gulp.watch(src.assets, ['assets']);
-    gulp.watch(src.styles, ['styles']);
+    gulp.watch(src.scss, ['scss']);
     cb();
   });
 });

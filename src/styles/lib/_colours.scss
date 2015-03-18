@@ -1,0 +1,435 @@
+/**** Colours *****/
+
+/* use http://www.colorzilla.com/gradient-editor/ */
+/* Copy and paste non active colour from existing code to site through import css button */
+/* Change colour as per pantone selection from http://goffgrafix.com/pantone-rgb-100.php */
+/* Copy and paste new code into CSS */
+/* Clicey on reverse for the active mode colour - copy and paste into active code */
+
+
+
+
+@import 'cantilever_colour_pallet';
+
+////FOR BILL NAME
+
+
+.bill_screen_open{
+  color: $black;
+}
+
+
+.bill_screen_closed{
+  color: $red;
+}
+
+//END OF BILL NAME
+
+.home_screen_blank{
+  background: $keypad-blue;
+}
+
+//.home_screen_blank{
+//  background-color: lighten($background-black, 30%);
+//}
+
+.greyed_out .home_screen_blank{
+  background: $black;
+}
+
+.home_screen_empty_table{
+  background-colorcolor: $blue-light;
+}
+
+.home_screen_empty_table:active{
+  background-color: $black;
+}
+.home_screen_open{
+  background-color: $yellow;
+}
+
+.home_screen_open:active{
+  background-color: $yellow;
+}
+
+.home_screen_closed{
+  background-color: $red;
+}
+
+.home_screen_closed:active{
+  background-color: $red-dark;
+}
+
+.keypad{
+  background-color: $background-black;
+
+}
+   .keypad__numpad__row__button, .keypad__display {
+     background-color: $keypad-blue;
+     color: $white;
+     &:active{
+       background-color: lighten($keypad-blue, 10%);
+     }
+   }
+
+ .h_button_fn{
+   background-color: $black;
+   color: $white;
+   &:active{
+     background-color: $keypad-blue;
+     &.greyed_out{
+       background-color: $black;
+     }
+   }
+ }
+.h_button_fn.selected{
+  background-color: $keypad-blue;
+  color: $white;
+  &:active{
+    background-color: darken($keypad-blue, 30%);
+  }
+}
+
+body{
+  background-color: $background-black;
+  color: $background-black;
+}
+
+.button_suggestion{
+  background-color: $white;
+}
+
+.h_button_category{
+  background-color: $grey;
+}
+
+.h_button_item {
+  background-color: $black;
+  border-color: $background-black;
+  &:active {
+    background-color: darken($grey-light, 30%);
+  }
+}
+
+.my_shift {
+  .h_button_item {
+    background-color: $grey-light;
+    border-color: $background-black;
+    .button_text
+    {
+      color:$black;
+    }
+    &:active {
+      background-color: darken($grey-light, 30%);
+    }
+
+  }
+}
+
+.button_text, .item_button_text{
+  color: $white;
+}
+
+.id_categories .not_selected{
+  background-color: $black;
+  color: $white;
+  &:active{
+     background-color: $keypad-blue;
+  }
+}
+
+.id_categories .selected{
+  background-color: $keypad-blue;
+  color: $white;
+  &:active{
+    background-color: $keypad-blue;
+  }
+}
+
+.id_sales_details {
+  background-color: $bill-white;
+  border-color: $black;
+}
+
+.category_spacebar,.functions_spacebar, .myshift_spacebar {
+
+  background-color: $keypad-blue;
+}
+
+
+
+.sales-bill {
+  color: $black;
+  background-color: $bill-white;
+}
+
+.cell2
+{
+
+  background-color: $bill-white;
+}
+  .id_sales_details .id_search_box {
+    border-color: $black;
+  }
+
+.id_sales_details .id_logo {
+  background-color: $grey;
+}
+
+.h_status{
+  color: $white;
+}
+.higgins-name {
+  color: $white;
+}
+.sales_receipt .qty_wrap {
+background-color: $grey;
+}
+
+.button_higgins_inner {
+
+  background-color: $red;
+}
+.button_higgins_inner:active {
+  background-color: $button-red-dark;
+}
+
+.button_higgins {
+  background-color: $button-red-dark;
+}
+
+.h_home_screen_dot {
+  background-color: $black;
+  border-color: $grey;
+}
+
+.home_solid_dot {
+ background-color: $white;
+}
+
+
+.tab {
+  background-color:$black;
+  color: $white;
+  &:active{
+    background-color: $keypad-blue;
+  }
+}
+
+.kitchen-chit {
+  background-color: $white;
+  color: $black;
+}
+
+.background_div {
+  background-color: $white;
+  color: $red;
+}
+
+.breakdown {
+  background-color: $white;
+  border-color: $red;
+  color: $black;
+}
+
+.higgins_footer_logo {
+  color: $red;
+}
+
+.higgins_footer_text {
+  color: $red;
+}
+
+.h_login {
+  background-color: $black;
+  color: $white;
+}
+
+.h_submit {
+  background-color: $red;
+  color: $white;
+}
+
+.report-head {
+  background-color: $grey;
+}
+
+.inputs .invalid {
+  background-color: $red;
+}
+
+.h-logo {
+  color: $red;
+}
+.higgins_h_style {
+  background-color: #ffffff;
+}
+
+
+.dashboard_splash {
+  background-color: $background-black;
+}
+
+.dashboard_splash_inner {
+  background-color: $white;
+}
+
+.dashboard_splash_inner:active {
+  background-color: $white;
+}
+
+.higgins_h_style {
+  background-color: $white;
+}
+
+.dashboard_splash {
+  background-color: $background-black;
+}
+
+
+.dashboard_splash_inner {
+  background-color: $dash-red
+}
+
+.dashboard_splash_inner:active {
+  background-color: $button-red-dark;
+}
+
+
+
+.h_detail_tab {
+  background-color: $grey;
+
+  color: $black;
+}
+
+.h_receipt_row .id_qty_wrap {
+  background-color: $grey;
+}
+
+.button_fn {
+  background-color: $white;
+  color: $black;
+}
+
+.button_fn:active {
+  color: $grey;
+}
+
+.button_sales_function_highlight {
+  background-color: $grey;
+}
+
+.id_remove_circle {
+  border-color: $black;
+}
+.id_remove_circle:active {
+  border-color: $grey;
+  color: $grey;
+}
+
+.h_employee_details .id_image {
+  background-color: $grey;
+}
+
+.h_employee_details .name_area {
+  border-bottom-color: $grey;
+}
+.sales_receipt
+  .id_details .id_search_box {
+    border-color: $black;
+  }
+
+  .id_logo {
+    background-color: $grey;
+  }
+
+.sales-receipt {
+  border-color: $black;
+}
+
+.id_details {
+  background-color: $bill-white;
+  color: $black;
+}
+
+.breadcrumb,.user-name, .status-date, .status-time, .status-bar__terminal-name{
+  color: $white;
+}
+
+//changed to cantilever
+.ai-bar .no-y > div{
+  background-color: $black;
+  color: $white;
+  &:active{
+   background-color:$keypad-blue;
+  }
+}
+
+.triangle-up
+{
+  color: $grey;
+}
+
+.ham_icon,.ham_icon::before,.ham_icon:after,.register,.register:after, .register_icon:after, .register_icon:before {
+  background-color:$white;
+}
+
+
+.greyed_out .button_text  {
+  color: $keypad-blue;
+}
+
+
+/*
+//I'm pretty sure this is redundant
+*/
+//$categoryColours: $category1, $category2, $category3, $category4;
+////If darkening is desired, use negative value.
+//$categoryLightening: 0%, -10%, 10%, 20%;
+
+
+.billIcon{
+  border: $black;
+  background: $black;
+  color: $white;
+}
+
+.billIconGreyed{
+  border: $black;
+  background: $white;
+  color: $black;
+}
+
+.lockBody, .verticalShackle, .verticalShackleClose{
+  background: lighten($keypad-blue, 10%);
+}
+
+.shackle{
+  border-color: lighten($keypad-blue, 10%);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.quick-pay__suggestion{
+  background-color: $black;
+  color: $white;
+  &:active{
+    background-color: $keypad-blue;
+    &.greyed_out{
+      background-color: $black;
+    }
+  }
+}
+
+.slide{
+  background-color: transparentize($background-black, 0.1 );
+}
+
+.trans--discounted{
+  color: $red;
+}
+
+.trans--refunded{
+  color: $red;
+}

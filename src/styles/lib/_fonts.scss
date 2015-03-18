@@ -1,0 +1,205 @@
+//@font-face {
+//  font-family: 'Nexa';
+//  src:url('/font/Nexa%20Bold.otf');
+//}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/font/RobotoCondensed-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/font/RobotoCondensed-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Roboto', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+$condensed: 'Roboto Condensed', 'Roboto', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+.condensed{
+   font-family: $condensed !important;
+  .cell2{
+    font-size: 100%;
+    text-transform: none;
+  }
+}
+
+.line-through{
+  text-decoration: line-through;
+}
+//Reset
+input, select, textarea, button{
+  font-family:inherit;
+  font-width: inherit;
+  font-size: inherit;
+}
+
+
+////////////////
+//Legacy stuff, does it do anything?
+///////////////
+//.h_button_home_screen .text_bottom_right,   .h_button_home_screen .text_bottom_left {
+//  font-size: 80%;
+//}
+//
+//input::-webkit-input-placeholder {
+//  font-size: 70%;
+//}
+//
+//.id_sales_details, .id_details {
+//  font-size: 115%;
+//}
+//
+//.billIcon, .billIconGreyed {
+//   line-height: 1;
+//  text-align: center;
+//}
+//
+//.h_button_home_screen {
+//  font-weight: 500;
+//}
+//
+//.home_button_text {
+//  font-weight: 500;
+//}
+//
+//////////////
+////End legacy styles
+/////////////
+
+.item_button_text{
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.sales-receipt__transactions {
+  line-height: 175%;
+  font-weight: 400;
+}
+
+.trans--disabled{
+  font-weight: 100;
+}
+
+.cell2{
+  font-size: 150%;
+  font-weight: 100;
+  text-transform: uppercase;
+
+}
+
+.total-bill {
+  font-size: 200%;
+  font-weight: 100;
+}
+
+.h_button_category{
+  font-size: 85%;
+}
+
+.sales-notes{
+  font-family: $condensed;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+.keypad__display, .keypad__numpad .keypad__numpad__row__button {
+  font-size: 250%;
+  font-weight: 100;
+}
+
+
+
+.button-label{
+  font-size: medium;
+}
+
+.total-font {
+  text-transform: uppercase;
+  font-size: 70%;
+  line-height: 250%;
+}
+
+.sales-bill-totals .columnOne{
+  font-size: 80%;
+  text-transform: uppercase;
+}
+
+.login-container {
+  font-width: 300;
+}
+
+.text_bottom_right, .text_bottom_left{
+  font-size:80%;
+  font-weight: 100;
+}
+//Tabs fonts
+
+.bill-info {
+
+  &__name{
+    font-size: 125%;
+    text-overflow: ellipsis;
+  }
+
+  &__total{
+    font-weight: 300;
+  }
+
+  &__date-time {
+    font-weight: 300;
+  }
+}
+
+//Bill History Fonts
+.billHistory{
+  .bill-info {
+    &__name{
+      font-size: 100%;
+      text-overflow: ellipsis;
+    }
+
+    &__total{
+      font-weight: 400;
+    }
+
+    &__date-time {
+      font-weight: 400;
+    }
+  }
+}
