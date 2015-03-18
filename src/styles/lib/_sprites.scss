@@ -1,0 +1,10 @@
+@import "compass/utilities/sprites";
+@import "robot2/*.png";
+@include all-robot2-sprites;
+
+
+
+$red: blue;
+.testClass{
+	background: $red;
+}

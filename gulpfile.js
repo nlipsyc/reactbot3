@@ -76,7 +76,8 @@ gulp.task('scss', function() {
       }}))
     .pipe($.compass({
       css: 'build/css',
-      sass: 'src/styles'
+      sass: 'src/styles',
+      image: 'src/images'
     }))
     .on('error', function(err) {
       // Would like to catch the error here
