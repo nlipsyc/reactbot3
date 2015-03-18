@@ -66,6 +66,8 @@ gulp.task('assets', function() {
 // scss style sheets
 
 gulp.task('scss', function() {
+  src.scss = 'src/styles/**/*.scss';
+
   gulp.src('src/styles/**/*.scss')
     .pipe($.plumber({
       errorHandler: function (error) {
@@ -74,7 +76,7 @@ gulp.task('scss', function() {
       }}))
     .pipe($.compass({
       css: 'build/css',
-      sass: 'src/styles',
+      sass: 'src/styles'
     }))
     .on('error', function(err) {
       // Would like to catch the error here

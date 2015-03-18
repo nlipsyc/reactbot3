@@ -1,4 +1,13 @@
 @import "lib/_lib.scss";
 
-//@import "../../splash/sass/cantilever/splash.scss";
+//@import "../../splash/sass/cantilever/splash.scss"; asdfasd
 
+.App{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  display: block;
+  position: absolute;
+}
